@@ -44,3 +44,9 @@ if set(dna_sequence).issubset(valid_bases):
     print("Sequence is valid.")
 else:
     print("Sequence contains invalid bases.")
+print("\n--- DNA Analysis Report ---")
+print("Sequence:", dna_sequence)
+print("Length:", len(dna_sequence))
+print("GC Content:", round(gc_content, 2), "%")
+print("RNA:", rna_sequence)
+print("Protein:", protein)
