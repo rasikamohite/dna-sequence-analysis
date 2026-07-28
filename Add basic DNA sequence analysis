@@ -16,3 +16,22 @@ print("GC Content:", gc_content, "%")
 rna_sequence = dna_sequence.replace("T", "U")
 
 print("RNA Sequence:", rna_sequence)
+
+codon_table = {
+    "AUG": "M",
+    "UUU": "F", "UUC": "F",
+    "UUA": "L", "UUG": "L",
+    "UCU": "S", "UCC": "S", "UCA": "S", "UCG": "S",
+    "UAU": "Y", "UAC": "Y",
+    "UGU": "C", "UGC": "C",
+    "UGG": "W",
+    "UAA": "*", "UAG": "*", "UGA": "*"
+}
+
+protein = ""
+
+for i in range(0, len(rna_sequence) - 2, 3):
+    codon = rna_sequence[i:i+3]
+    protein += codon_table.get(codon, "?")
+
+print("Protein:", protein)
