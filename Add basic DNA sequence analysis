@@ -35,3 +35,12 @@ for i in range(0, len(rna_sequence) - 2, 3):
     protein += codon_table.get(codon, "?")
 
 print("Protein:", protein)
+
+dna_sequence = dna_sequence.upper().replace(" ", "")
+
+valid_bases = set("ATGC")
+
+if set(dna_sequence).issubset(valid_bases):
+    print("Sequence is valid.")
+else:
+    print("Sequence contains invalid bases.")
