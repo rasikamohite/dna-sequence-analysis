@@ -1,0 +1,9 @@
+dna_sequence = "ATGCGTACGTTAGC"
+print("DNA Sequence:", dna_sequence)
+
+print("Length:", len(dna_sequence))
+
+print("A:", dna_sequence.count("A"))
+print("T:", dna_sequence.count("T"))
+print("G:", dna_sequence.count("G"))
+print("C:", dna_sequence.count("C"))
