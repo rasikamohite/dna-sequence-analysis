@@ -12,3 +12,7 @@ print("C:", dna_sequence.count("C"))
 gc_content = ((dna_sequence.count("G") + dna_sequence.count("C")) / len(dna_sequence)) * 100
 
 print("GC Content:", gc_content, "%")
+
+rna_sequence = dna_sequence.replace("T", "U")
+
+print("RNA Sequence:", rna_sequence)
